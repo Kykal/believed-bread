@@ -7,6 +7,7 @@ import { Api } from '../../_configurations/router';
 import AdsChart from './_components/AdsChart';
 import AdsTable from './_components/AdsTable';
 import Card from '../../_components/Card';
+import SearchBar from '../../_components/SearchBar';
 
 
 //Main component content
@@ -39,12 +40,12 @@ const MetaAdsFetcher = () => {
 		return (
 			<div className='space-y-4' >
 				<Card label='Visualizaciones' >
-					<p className='text-center text-red-500 font-medium text-xl' >
+					<p className='center h-[300px] text-red-500 font-medium text-lg' >
 						¡Ocurrió un error!
 					</p>
 				</Card>
 				<div className="card p-4">
-					<p className='text-center text-red-500 font-medium text-xl' >
+					<p className='text-center text-red-500 font-medium text-lg' >
 						¡Ocurrió un error!
 					</p>
 				</div>
@@ -56,7 +57,7 @@ const MetaAdsFetcher = () => {
 		return (
 			<div className='space-y-4' >
 				<Card label='Visualizaciones' >
-					<p className='text-center font-medium text-neutral-300' >
+					<p className='center font-medium text-neutral-300 h-[300px]' >
 						Cargando
 					</p>
 				</Card>
@@ -75,6 +76,7 @@ const MetaAdsFetcher = () => {
 
 	return (
 		<div className='space-y-4' >
+			<SearchBar />
 			<Card label='Visualizaciones' >
 				<AdsChart ads={ads} />
 			</Card>

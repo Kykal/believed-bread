@@ -6,6 +6,7 @@ import { createBrowserRouter, RouteObject } from 'react-router-dom';
 import Root from '../(pages)/main';
 import MetaAds from '../(pages)/meta-ads';
 import Error from '../(pages)/meta-ads/error';
+import searchQueryAction from '../_actions/SearchQueryAction';
 
 
 export enum Routes {
@@ -32,6 +33,7 @@ const routes: RouteObject[] = [
 				path: Routes.metaAds,
 				element: <MetaAds />,
 				errorElement: <Error />,
+				action: searchQueryAction,
 			}
 		]
 	},
