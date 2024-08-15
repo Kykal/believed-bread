@@ -1,12 +1,16 @@
+//Components
+import { Outlet } from 'react-router-dom';
+import Header from '../_components/Header';
+
+
 //Main component content
 const Root = (): JSX.Element => {
 	//Main component render
 	return (
-		<div className='container'>
-			<h1 className='text-2xl text-neutral-700' >
-				Landing
-			</h1>
-		</div>
+		<>
+			<Header />
+			<Outlet />
+		</>
 	);
 };
 

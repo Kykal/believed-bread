@@ -2,3 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+	body {
+		@apply
+			text-neutral-700
+		;
+	}
+
+	main {
+		@apply
+			container
+			mx-auto
+			px-4 md:px-0
+		;
+	}
+
+	table {
+		@apply
+			w-full
+		;
+	}
+
+	tr {
+		@apply
+			table-row
+		;
+	}
+
+	th {
+		@apply
+			font-medium
+			text-lg
+			text-neutral-400
+			py-3
+			px-5
+		;
+	}
+
+	td {
+		@apply
+			table-cell
+			py-3
+			px-5
+		;
+	}
+
+	thead {
+		@apply
+			table-header-group
+			border-b-[1px] border-b-neutral-300
+		;
+	}
+
+	header {
+		@apply
+			h-20
+			sticky
+			px-4 md:px-0
+		;
+	}
+
+	.icon-button {
+		@apply
+			transition-all
+			p-2
+			aspect-square
+			h-11
+			center
+			text-2xl
+			rounded
+			text-neutral-500
+			hover:bg-neutral-100
+		;
+	}
+}
+
+
+@layer components {
+	.card {
+		@apply
+			rounded-lg
+			bg-neutral-100
+		;
+	}
+}
+
+@layer utilities {
+	.center {
+		@apply
+			flex items-center justify-center
+		;
+	}
+}
