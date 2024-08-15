@@ -1,6 +1,9 @@
-import useSWR from 'swr';
-import { fetcher } from '../../_configurations/swr';
-import { Api } from '../../_configurations/router';
+//React router
+import { useLoaderData, useNavigation } from 'react-router-dom';
+
+
+//Types
+import type MetaAd from '../../_types/metaAd';
 
 
 //Components
@@ -33,29 +36,13 @@ export default Page; //Export main component
 
 const MetaAdsFetcher = () => {
 
-	const { data, error, isLoading } = useSWR(Api.metaAds, fetcher);
+	const ads = useLoaderData() as MetaAd[];
+	const { state } = useNavigation();
 
-
-	if( error ){
+	if( state === 'loading' ) {
 		return (
 			<div className='space-y-4' >
-				<Card label='Visualizaciones' >
-					<p className='center h-[300px] text-red-500 font-medium text-lg' >
-						¡Ocurrió un error!
-					</p>
-				</Card>
-				<div className="card p-4">
-					<p className='text-center text-red-500 font-medium text-lg' >
-						¡Ocurrió un error!
-					</p>
-				</div>
-			</div>
-		);
-	}
-
-	if( isLoading ) {
-		return (
-			<div className='space-y-4' >
+				<SearchBar disabled />
 				<Card label='Visualizaciones' >
 					<p className='center font-medium text-neutral-300 h-[300px]' >
 						Cargando
@@ -69,9 +56,6 @@ const MetaAdsFetcher = () => {
 			</div>
 		);
 	}
-
-
-	const ads = data['anuncios'];
 
 
 	return (
