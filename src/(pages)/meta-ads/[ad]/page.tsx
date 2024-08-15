@@ -4,11 +4,12 @@ import { useLoaderData, useNavigation } from 'react-router-dom';
 
 //Components
 import Card from '../../../_components/Card';
+import Tooltip from '../../../_components/Tooltip';
 
 
 //Types
 import type MetaAd from '../../../_types/metaAd';
-type StakeCardProps = {
+type ScopeCardProps = {
 	ad: MetaAd;
 };
 type AdCostCardProps = {
@@ -34,8 +35,8 @@ const Page = (): JSX.Element => {
 					{state === 'loading' ? 'Cargando' : data.nombre}
 				</h2>
 			</div>
-			<div className='space-y-2' >
-				<StakeCard ad={data} />
+			<div className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 gap-4' >
+				<ScopeCard ad={data} />
 				<AdCostCard ad={data} />
 			</div>
 		</main>
@@ -55,7 +56,7 @@ const AdCostCard = ({ad}: AdCostCardProps) => {
 
 
 	return (
-		<Card label='Gasto publicidad' >
+		<Card label='Gasto publicidad' className='shadow-md' >
 			<div className='flex items-end justify-end' >
 				<div className='font-medium text-xl' >
 					Mex
@@ -69,7 +70,7 @@ const AdCostCard = ({ad}: AdCostCardProps) => {
 }
 
 
-const StakeCard = ({ad}: StakeCardProps) => {
+const ScopeCard = ({ad}: ScopeCardProps) => {
 
 	const { state } = useNavigation();
 
@@ -81,7 +82,7 @@ const StakeCard = ({ad}: StakeCardProps) => {
 
 
 	return (
-		<Card label='Alcance' >
+		<Card label='Alcance' className='shadow-md' >
 			<div className='space-y-4' >
 				<div className='font-bold text-4xl text-end' >
 					{isLoading ? 'Cargando' : ad.alcance}
@@ -96,8 +97,13 @@ const StakeCard = ({ad}: StakeCardProps) => {
 								<div className='text-3xl font-semibold' >
 									{isLoading ? 'Cargando' : ad.participación}
 								</div>
-								<div className='w-12 text-end text-green-500' >
-									{`(${isLoading ? '?' : stakePercentage}%)`}
+								<div className='group relative center' >
+									<div className='w-12 text-end text-green-500' >
+										{`(${isLoading ? '?' : stakePercentage}%)`}
+									</div>
+									<Tooltip>
+										En relación al alcance.
+									</Tooltip>
 								</div>
 							</div>
 						</div>

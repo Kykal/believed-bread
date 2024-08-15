@@ -12,7 +12,10 @@ const AdsTable = ({ads}: AdsTableProps): JSX.Element => {
 
 
 	const rows = ads.map( (ad, index) => (
-		<tr key={`meta-ads-${ad.nombre}-${index}`} className='hover:bg-neutral-200' >
+		<tr
+			key={`meta-ads-${ad.nombre}-${index}`}
+			className='hover:bg-neutral-200 active:bg-neutral-300'
+		>
 			<td className='text-start' >
 				<Link to={`${Routes.metaAds}/${ad.nombre}`} className='block px-4 py-3' >
 					{ad.nombre}

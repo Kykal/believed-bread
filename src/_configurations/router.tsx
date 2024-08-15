@@ -34,7 +34,10 @@ export enum Api {
  * To fetch all Meta Ads.
  * @returns 
  */
-const metaAdsLoader = async () => {
+const metaAdsLoader = async ({request}: LoaderFunctionArgs) => {
+
+	const url = new URL(request.url);
+	const query = url.searchParams.get('query');
 
 	const res = await fetch(Api.metaAds);
 
@@ -44,6 +47,10 @@ const metaAdsLoader = async () => {
 
 	const data = await res.json();
 	const ads: MetaAdType[] = data['anuncios'];
+
+	if(query){
+		return ads.filter( (ad) => ad.nombre.toLocaleLowerCase().includes(query!.toLowerCase()) ) ;
+	}
 
 	return ads;
 };

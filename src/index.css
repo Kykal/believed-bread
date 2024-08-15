@@ -88,6 +88,35 @@
 			bg-neutral-100
 		;
 	}
+
+	.tooltip-container {
+		@apply
+			p-3
+			scale-0
+			absolute
+			transition-all
+			top-5
+			duration-75
+			origin-center
+			z-50
+		;
+	}
+
+	.tooltip {
+		@apply
+			text-neutral-700
+			bg-white
+			rounded-lg
+			shadow
+			p-2
+			text-center
+			text-sm
+			break-words
+			text-balance
+			min-w-max
+			max-w-12
+		;
+	}
 }
 
 @layer utilities {
