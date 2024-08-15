@@ -225,7 +225,7 @@ const ParticipationCard = ({ad}: ParticipationCardProps) => {
 					$
 				</div>
 				<div className='font-medium text-6xl' >
-					{( ad.gastoPublicidad/ad.alcance ).toFixed(2)}
+					{( ad.gastoPublicidad/ad.participación ).toFixed(2)}
 				</div>
 				<div className='font-medium text-lg' >
 					MXN
