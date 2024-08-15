@@ -1,5 +1,7 @@
 //Types
+import { Link } from 'react-router-dom';
 import type MetaAd from '../../../_types/metaAd';
+import { Routes } from '../../../_configurations/router';
 type AdsTableProps = {
 	ads: MetaAd[];
 };
@@ -12,10 +14,14 @@ const AdsTable = ({ads}: AdsTableProps): JSX.Element => {
 	const rows = ads.map( (ad, index) => (
 		<tr key={`meta-ads-${ad.nombre}-${index}`} className='hover:bg-neutral-200' >
 			<td className='text-start' >
-				{ad.nombre}
+				<Link to={`${Routes.metaAds}/${ad.nombre}`} className='block px-4 py-3' >
+					{ad.nombre}
+				</Link>
 			</td>
 			<td className='text-end' >
-				{ad.alcance}
+				<Link to={`${Routes.metaAds}/${ad.nombre}`} className='block px-4 py-3' >
+					{ad.alcance}
+				</Link>
 			</td>
 		</tr>
 	) );

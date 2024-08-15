@@ -39,10 +39,15 @@ const MetaAdsFetcher = () => {
 		return (
 			<div className='space-y-4' >
 				<Card label='Visualizaciones' >
-					<p>
+					<p className='text-center text-red-500 font-medium text-xl' >
 						¡Ocurrió un error!
 					</p>
 				</Card>
+				<div className="card p-4">
+					<p className='text-center text-red-500 font-medium text-xl' >
+						¡Ocurrió un error!
+					</p>
+				</div>
 			</div>
 		);
 	}
@@ -51,10 +56,15 @@ const MetaAdsFetcher = () => {
 		return (
 			<div className='space-y-4' >
 				<Card label='Visualizaciones' >
-					<p>
+					<p className='text-center font-medium text-neutral-300' >
 						Cargando
 					</p>
 				</Card>
+				<div className="card p-4">
+					<p className='text-center font-medium text-neutral-300' >
+						Cargando
+					</p>
+				</div>
 			</div>
 		);
 	}

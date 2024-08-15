@@ -21,12 +21,15 @@
 	table {
 		@apply
 			w-full
+			border-spacing-0
 		;
 	}
 
 	tr {
 		@apply
 			table-row
+			border-b-[1px] border-b-neutral-200
+			last:border-0
 		;
 	}
 
@@ -36,15 +39,14 @@
 			text-lg
 			text-neutral-400
 			py-3
-			px-5
+			px-4
 		;
 	}
 
 	td {
 		@apply
 			table-cell
-			py-3
-			px-5
+			p-0
 		;
 	}
 
