@@ -16,6 +16,14 @@ const monsterrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Prueba de desarrollo - Admira',
+  creator: 'Alan Xavier Benavides Benavides',
+
+  authors: [
+    {
+      name: 'Alan Xavier Benavides Benavides',
+      url: 'https://github.com/Kykal',
+    }
+  ],
 };
 
 
