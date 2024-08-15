@@ -1,8 +1,8 @@
 //Types
 type CardProps = {
 	label: string;
-	children: React.ReactNode;
-
+	
+	children?: React.ReactNode;
 	subLabel?: string;
 	className?: string;
 };
@@ -13,9 +13,9 @@ const Card = ({label, subLabel, children, className}: CardProps): JSX.Element =>
 
 	//Main component render
 	return (
-		<div className={`card pt-3 px-4 pb-5 ${className}`}  >
+		<div className={`card flex flex-col space-y-2 pt-3 px-4 pb-5 ${className}`}  >
 			<div className='flex items-center justify-between' >
-				<div className='text-lg font-semibold text-neutral-400' >
+				<div className='text-lg font-semibold text-neutral-400 uppercase' >
 					{label}
 				</div>
 				{subLabel && (
@@ -24,7 +24,9 @@ const Card = ({label, subLabel, children, className}: CardProps): JSX.Element =>
 					</div>
 				)}
 			</div>
-			{children}
+			<div className='grow' >
+				{children}
+			</div>
 		</div>
 	);
 };
