@@ -54,17 +54,25 @@ if( Boolean(query) ){
     (ad) => ad.nombre.toLocaleLowerCase().includes(query!.toLowerCase()) // En donde su nombre incluya el query dado
   );
 } else {
-	parsedData = googleAdsData.campañas;
+  parsedData = googleAdsData.campañas;
 }
 
 const rows = parsedData.map( (item, index) => (
-	<TableRow
-		key={`google-ad-table-row-${item.nombre}-${index}`}
-		{...item}
-	/>
+  <TableRow
+    key={`google-ad-table-row-${item.nombre}-${index}`}
+    {...item}
+  />
 ) );
 ```
 
 
 
 # Capturas de pantalla
+![imagen](https://github.com/user-attachments/assets/83f205f4-541d-472c-a64a-98b31f60ad65)
+![imagen](https://github.com/user-attachments/assets/ea013ab4-12e9-4dd1-87a7-fe0df0ab308d)
+![imagen](https://github.com/user-attachments/assets/bbbdf38d-8d61-497e-b97c-d77fe5efc479)
+![imagen](https://github.com/user-attachments/assets/3b07fa42-f8c6-4b67-800b-c8a8cabe541d)
+![imagen](https://github.com/user-attachments/assets/bdcb4ffe-31c3-4e90-b6e3-9cee300a05c0)
+![imagen](https://github.com/user-attachments/assets/eca19972-5bec-46fa-8fd5-20dfac80d644)
+![imagen](https://github.com/user-attachments/assets/f3529f60-57c6-4d98-a24f-906a9e773dff)
+![imagen](https://github.com/user-attachments/assets/3511f00e-c600-458e-8ca1-bbec258d2911)
