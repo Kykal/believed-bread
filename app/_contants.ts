@@ -1,3 +1,5 @@
+import GoogleAnalytics from './_types/GoogleAnalytics';
+
 export const metaAdsData = {
 	anuncios: [
     {
@@ -38,7 +40,7 @@ export const googleAdsData = {
 };
 
 
-export const googleAnalyticsData = {
+export const googleAnalyticsData: GoogleAnalytics = {
   vistasPagina: [
     {
       fecha: '2024-08-01',

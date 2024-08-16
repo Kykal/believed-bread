@@ -6,6 +6,8 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 //Styles
 import "./globals.css";
 import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
+import '@mantine/dates/styles.css';
 import { Montserrat } from "next/font/google";
 
 

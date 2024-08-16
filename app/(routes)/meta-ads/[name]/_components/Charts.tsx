@@ -38,6 +38,12 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 
 	const data = metaAdsData.anuncios.filter( ({nombre}) => nombre.toLowerCase() == name.toLowerCase() )[0];
 
+	const span = {
+		base: 12,
+		sm: 6,
+		lg: 3,
+	};
+
 	const costCard = (
 		<PrefabCard title='Costo' >
 			<Group
@@ -67,7 +73,6 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 		</PrefabCard>
 	);
 
-
 	const reachCard = (
 		<PrefabCard title='Alcance' >
 			<Stack gap='lg' >
@@ -84,7 +89,6 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 			</Stack>
 		</PrefabCard>
 	);
-
 
 	const conversionCard = (
 		<PrefabCard title='Conversión' >
@@ -134,40 +138,16 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 	//Main component render
 	return (
 		<Grid>
-			<GridCol
-				span={{
-					base: 12,
-					sm: 6,
-					lg: 3,
-				}}
-			>
+			<GridCol span={span} >
 				{costCard}
 			</GridCol>
-			<GridCol
-				span={{
-					base: 12,
-					sm: 6,
-					lg: 3,
-				}}
-			>
+			<GridCol span={span} >
 				{reachCard}
 			</GridCol>
-			<GridCol
-				span={{
-					base: 12,
-					sm: 6,
-					lg: 3,
-				}}
-			>
+			<GridCol span={span} >
 				{conversionCard}
-				</GridCol>
-			<GridCol
-				span={{
-					base: 12,
-					sm: 6,
-					lg: 3,
-				}}
-			>
+			</GridCol>
+			<GridCol span={span} >
 				{participationCard}
 			</GridCol>
 		</Grid>
