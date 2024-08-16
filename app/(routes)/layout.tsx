@@ -53,7 +53,7 @@ const Page = ({children}: PageProps): JSX.Element => {
             onClick={toggle}
             hiddenFrom='sm'
           />
-          <Title order={2} >
+          <Title order={1} size='h2' >
             Dashboard
           </Title>
         </Group>
