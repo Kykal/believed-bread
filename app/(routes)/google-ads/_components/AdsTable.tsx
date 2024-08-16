@@ -31,9 +31,9 @@ const AdsTable = ({query}: AdsTableProps): JSX.Element => {
 		<TableThead>
 			<TableTr>
 				<TableTh>Campaña</TableTh>
-				<TableTh display={display} style={{ textAlign: 'right' }} >Costo</TableTh>
-				<TableTh display={display} style={{ textAlign: 'right' }} >Clics</TableTh>
-				<TableTh display={display} style={{ textAlign: 'right' }} >Conversiones</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Costo</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Clics</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Conversiones</TableTh>
 				<TableTh style={{ textAlign: 'right' }} >Impresiones</TableTh>
 				<TableTh style={{ textAlign: 'right' }} w={rem(125)} >Acciones</TableTh>
 			</TableTr>
