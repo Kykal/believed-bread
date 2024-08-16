@@ -7,7 +7,6 @@ import { PieChart } from '@mantine/charts';
 import PrefabCard from '../../_components/PrefabCard';
 
 
-
 const COLORS = ['teal', 'blue'];
 
 

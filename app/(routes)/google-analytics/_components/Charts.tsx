@@ -4,17 +4,15 @@ import { googleAnalyticsData } from '@/app/_contants';
 //MATERIAL DESIGN
 //Components
 import {
-	Card,
-	CardSection,
 	Grid,
 	GridCol,
-	Title,
 } from '@mantine/core';
 
 
 //Components
-import ViewsChart from './ViewsChart';
+import AgeChart from './AgeChart';
 import GenderChart from './GenderChart';
+import ViewsChart from './ViewsChart';
 
 
 //Types
@@ -54,6 +52,9 @@ const Charts = ({startDate, endDate}: ChartsProps): JSX.Element => {
 			</GridCol>
 			<GridCol span={span} >
 				<GenderChart data={data} />
+			</GridCol>
+			<GridCol span={span} >
+				<AgeChart data={data} />
 			</GridCol>
 		</Grid>
 	);
