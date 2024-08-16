@@ -23,7 +23,7 @@ const MetaAdsHeader = (): JSX.Element => {
 				}}
 			>
 				<Title order={2} size='h3' >
-					Meta ads
+					Meta Ads
 				</Title>
 			</GridCol>
 			<GridCol

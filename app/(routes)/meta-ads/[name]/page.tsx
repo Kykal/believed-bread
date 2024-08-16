@@ -14,7 +14,7 @@ type PageProps = {
 //Main component content
 const Page = ({params: { name }}: PageProps): JSX.Element => {
 
-	const parsedName = name.replaceAll('_', ' ');
+	const parsedName = decodeURI(name).replaceAll('_', ' ');
 
 	
 	//Main component render

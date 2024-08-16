@@ -19,7 +19,6 @@ import {
 
 //Types
 import type GoogleAd from '@/app/_types/GoogleAd';
-import { usePathname } from 'next/navigation';
 type ChartsProps = {
 	name: string;
 };
@@ -61,7 +60,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 					</Group>
 					<Group align='center' justify='center' >
 						<Text c='dimmed' size='sm' >
-							Costo total de anuncio.
+							Costo total de la campaña.
 						</Text>
 					</Group>
 				</Stack>

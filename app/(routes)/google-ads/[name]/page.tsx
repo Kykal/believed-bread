@@ -1,5 +1,7 @@
+//Components
 import Charts from './_components/Charts';
 import GoogleAdHeader from './_components/GoogleAdHeader';
+
 
 //Types
 type PageProps = {
@@ -12,12 +14,14 @@ type PageProps = {
 //Main component content
 const Page = ({params: { name }}: PageProps): JSX.Element => {
 
-	const parsedName = name.replaceAll('_', ' ');
+	const parsedName = decodeURI(name).replaceAll('_', ' ');
+
 
 	//Main component render
 	return (
 		<>
 			<GoogleAdHeader name={parsedName} />
+			<Charts name={parsedName} />
 		</>
 	);
 };
