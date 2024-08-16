@@ -53,7 +53,7 @@ const Charts = ({startDate, endDate}: ChartsProps): JSX.Element => {
 				/>
 			</GridCol>
 			<GridCol span={span} >
-				<GenderChart />
+				<GenderChart data={data} />
 			</GridCol>
 		</Grid>
 	);

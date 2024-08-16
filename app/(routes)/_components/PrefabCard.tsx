@@ -1,14 +1,14 @@
-import { Card, CardSection, Title } from '@mantine/core';
+import { Card, CardSection, CardSectionProps, Title } from '@mantine/core';
 
 //Types
-type PrefabCardProps = {
+type PrefabCardProps = CardSectionProps & {
 	title: string;
 	children: React.ReactNode;
 };
 
 
 //Main component content
-const PrefabCard = ({title, children}: PrefabCardProps): JSX.Element => {
+const PrefabCard = ({title, children, style, ...attributesProps}: PrefabCardProps): JSX.Element => {
 	//Main component render
 	return (
 		<Card
@@ -22,7 +22,15 @@ const PrefabCard = ({title, children}: PrefabCardProps): JSX.Element => {
 					{title}
 				</Title>
 			</CardSection>
-			<CardSection inheritPadding py='xs' style={{ flexGrow: 1, }} >
+			<CardSection
+				inheritPadding
+				py='xs'
+				{...attributesProps}
+				style={{
+					...style,
+					flexGrow: 1,
+				}}
+			>
 				{children}
 			</CardSection>
 		</Card>
