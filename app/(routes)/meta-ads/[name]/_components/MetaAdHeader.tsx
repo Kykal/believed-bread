@@ -25,9 +25,9 @@ const MetaAdHeader = ({name}: MetaAdHeaderProps): JSX.Element => {
 			<Title order={2} size='h3' >
 				Meta ads
 			</Title>
-			<Text c='dimmed' >
+			<Title order={3} size='p' fw='normal' c='dimmed' >
 				{name}
-			</Text>
+			</Title>
 		</Group>
 	);
 };

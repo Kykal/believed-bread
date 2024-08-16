@@ -1,4 +1,7 @@
+//Components
 import MetaAdHeader from './_components/MetaAdHeader';
+import Charts from './_components/Charts';
+
 
 //Types
 type PageProps = {
@@ -11,13 +14,14 @@ type PageProps = {
 //Main component content
 const Page = ({params: { name }}: PageProps): JSX.Element => {
 
-	const parseName = name.replaceAll('_', ' ');
+	const parsedName = name.replaceAll('_', ' ');
 
-
+	
 	//Main component render
 	return (
 		<>
-			<MetaAdHeader name={parseName} />
+			<MetaAdHeader name={parsedName} />
+			<Charts name={parsedName} />
 		</>
 	);
 };
