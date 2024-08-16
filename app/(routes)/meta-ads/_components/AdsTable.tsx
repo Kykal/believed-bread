@@ -54,7 +54,7 @@ const AdsTable = ({query}: AdsTableProps): JSX.Element => {
 
 	const rows = parsedData.map( (item, index) => (
 		<TableRow
-			key={`table-row-${item.nombre}-${index}`}
+			key={`meta-ad-table-row-${item.nombre}-${index}`}
 			ad={item}
 		/>
 	) );
