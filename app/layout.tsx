@@ -38,7 +38,7 @@ type LayoutProps = {
 const RootLayout = ({children}: LayoutProps): JSX.Element => {
   //Main component render
   return (
-    <html lang='en' >
+    <html lang='es' >
       <head>
         <ColorSchemeScript />
       </head>
