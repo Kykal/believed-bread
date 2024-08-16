@@ -27,7 +27,7 @@ const TableRow = (ad: GoogleAd): JSX.Element => {
 		md: 'table-cell',
 	};
 
-	const href = `${Routes.googleAds}/${ad.nombre.replaceAll(' ', '_')}`;
+	const href = `${Routes.googleAds}/${ad.nombre}`;
 
 
 	//Main component render
