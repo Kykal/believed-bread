@@ -1,3 +1,4 @@
+import Crm from './_types/Crm';
 import GoogleAnalytics from './_types/GoogleAnalytics';
 
 export const metaAdsData = {
@@ -88,7 +89,7 @@ export const googleAnalyticsData: GoogleAnalytics = {
 };
 
 
-export const crmData = {
+export const crmData: Crm = {
   leads: [
     {
       nombre: 'Lead 1',
