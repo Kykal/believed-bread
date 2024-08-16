@@ -3,11 +3,21 @@ import { metaAdsData } from '@/app/_contants';
 
 //MATERIAL DESIGN
 //Components
-import { Card, CardSection, Grid, GridCol, Group, NumberFormatter, rem, Stack, Text, Title } from '@mantine/core';
+import {
+	Card,
+	CardSection,
+	Grid,
+	GridCol,
+	Group,
+	NumberFormatter,
+	rem,
+	Stack,
+	Text,
+	Title,
+} from '@mantine/core';
 
 
 //Types
-import type MetaAd from '@/app/_types/MetaAd';
 type ChartsProps = {
 	name: string;
 };
@@ -26,7 +36,7 @@ type SectionProps = {
 //Main component content
 const Charts = ({name}: ChartsProps): JSX.Element => {
 
-	const data = metaAdsData.anuncios.filter( ({nombre}) => nombre.toLowerCase().includes(name.toLowerCase()) )[0];
+	const data = metaAdsData.anuncios.filter( ({nombre}) => nombre.toLowerCase() == name.toLowerCase() )[0];
 
 	const costCard = (
 		<PrefabCard title='Costo' >
