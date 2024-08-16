@@ -69,7 +69,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 	);
 
 
-	const reachCard = (
+	const impressionsCard = (
 		<PrefabCard title='Impresiones' >
 			<Stack gap='lg' >
 				<Section
@@ -77,7 +77,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 					value={data.impresiones}
 				/>
 				<Section
-					label='Costo por alcance'
+					label='Costo por impresión'
 					value={data.impresiones/data.costo}
 					prefix='$'
 					suffix='MXN'
@@ -109,7 +109,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 		</PrefabCard>
 	);
 
-	const participationCard = (
+	const clicsCard = (
 		<PrefabCard title='Clics' >
 			<Stack gap='lg' >
 				<Section
@@ -151,7 +151,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 					lg: 3,
 				}}
 			>
-				{reachCard}
+				{impressionsCard}
 			</GridCol>
 			<GridCol
 				span={{
@@ -169,7 +169,7 @@ const Charts = ({name}: ChartsProps): JSX.Element => {
 					lg: 3,
 				}}
 			>
-				{participationCard}
+				{clicsCard}
 			</GridCol>
 		</Grid>
 	);
