@@ -27,6 +27,8 @@ const TableRow = (ad: GoogleAd): JSX.Element => {
 		md: 'table-cell',
 	};
 
+	const href = `${Routes.googleAds}/${ad.nombre.replaceAll(' ', '_')}`;
+
 
 	//Main component render
 	return (
@@ -52,7 +54,7 @@ const TableRow = (ad: GoogleAd): JSX.Element => {
 					<ActionIcon
 						variant='light'
 						component={Link}
-						href={`${Routes.googleAds}/${ad.nombre.replaceAll(' ', '_')}`}
+						href={href}
 					>
 						<MdKeyboardArrowRight />
 					</ActionIcon>

@@ -19,7 +19,7 @@ const GoogleAdsHeader = (): JSX.Element => {
 				}}
 			>
 				<Title order={2} size='h3' >
-					Google ads
+					Google Ads
 				</Title>
 			</GridCol>
 			<GridCol

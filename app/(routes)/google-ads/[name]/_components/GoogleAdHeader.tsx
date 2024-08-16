@@ -1,7 +1,3 @@
-//NextJS
-'use client';
-
-
 //MATERIAL DESIGN
 //Components
 import {
@@ -11,18 +7,18 @@ import {
 
 
 //Types
-type MetaAdHeaderProps = {
+type GoogleAdHeaderProps = {
 	name: string;
 };
 
 
 //Main component content
-const MetaAdHeader = ({name}: MetaAdHeaderProps): JSX.Element => {
+const GoogleAdHeader = ({name}: GoogleAdHeaderProps): JSX.Element => {
 	//Main component render
 	return (
 		<Group align='baseline' >
 			<Title order={2} size='h3' >
-				Meta Ads
+				Google Ads
 			</Title>
 			<Title order={3} size='p' fw='normal' c='dimmed' >
 				{name}
@@ -32,4 +28,4 @@ const MetaAdHeader = ({name}: MetaAdHeaderProps): JSX.Element => {
 };
 
 
-export default MetaAdHeader; //Export main component
+export default GoogleAdHeader; //Export main component
