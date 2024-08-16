@@ -3,6 +3,7 @@
 # Contenido
 - - -
 1. [Instrucciones de configuración.](#instrucciones-de-configuración)
+1. [Cómo desplegar la aplicación web](#cómo-desplegar-la-aplicación-web)
 1. [Elecciones de diseño.](#elecciones-de-diseño)
 1. [Comentarios de código.](#comentarios-de-código)
 1. [Capturas de pantalla](#capturas-de-pantalla)
@@ -26,6 +27,29 @@ npm install
 npm run dev
 ```
 1. Abrir en un navegador la dirección que arroja la consola
+
+# Cómo desplegar la aplicación web
+Se utilizó Vercel como sitio de hospedaje.
+**Se necesita una cuenta ya registrada en dicha plataforma y repositorio clonado en la cuenta de GitHub.**
+1. Iniciar sesión
+2. Dar clic en el botón "Agregar nuevo"
+![imagen](https://github.com/user-attachments/assets/9a538cd9-aa84-4b51-8a86-3a2d6f7c9574)
+4. Dar clic en "Proyecto"
+![imagen](https://github.com/user-attachments/assets/112ab373-6061-4873-b2db-4293447662d6)
+5. Dar clic en "Importar" en el proyecto que se desee desplegar
+![imagen](https://github.com/user-attachments/assets/4c888fbc-564c-47cb-a37d-f97a9cd46270)
+6. En el caso de este proyecto que fue desarrollado en NextJS ya vienen predeterminados los valores en los campos. De no ser así deben ser igual que la imágen
+![imagen](https://github.com/user-attachments/assets/25c167b1-8012-47e1-a6fb-24824c36ec58)
+7. Una vez dandole clic en el botón "Desplegar" solo habrá que esperar a que finalize de realizarlo
+
+## Configuraciones de compilación
+- Directorio raíz: `./`
+- Comando de *build*: **Ya predefinido**
+- Directorio de salida: **Ya predefinido**
+- Comando de instalación: **Ya predefinido**
+
+## Variables de entorno
+No hay variables de entorno.
 
 
 # Elecciones de diseño
