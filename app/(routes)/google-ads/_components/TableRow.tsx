@@ -22,12 +22,17 @@ import Link from 'next/link';
 //Main component content
 const TableRow = (ad: GoogleAd): JSX.Element => {
 
+	const display = {
+		base: 'none',
+		md: 'table-cell',
+	};
+
 
 	//Main component render
 	return (
 		<TableTr>
 			<TableTd>{ad.nombre}</TableTd>
-			<TableTd align='right' >
+			<TableTd align='right' display={display} >
 				<NumberFormatter
 					value={ad.costo}
 					prefix='$'
@@ -35,10 +40,10 @@ const TableRow = (ad: GoogleAd): JSX.Element => {
 					decimalScale={2}
 				/>
 			</TableTd>
-			<TableTd align='right' >
+			<TableTd align='right' display={display} >
 				{ad.clics} (<NumberFormatter value={(ad.clics*100)/ad.impresiones} suffix='%' decimalScale={2} style={{ color: 'green' }} />)
 			</TableTd>
-			<TableTd align='right' >
+			<TableTd align='right'  display={display}>
 				{ad.conversiones} (<NumberFormatter value={(ad.conversiones*100)/ad.impresiones} suffix='%' decimalScale={2} style={{ color: 'green' }} />)
 			</TableTd>
 			<TableTd align='right' >{ad.impresiones}</TableTd>
