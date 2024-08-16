@@ -51,7 +51,7 @@ const TableRow = ({ad}: TableRowProps): JSX.Element => {
 					<ActionIcon
 						variant='light'
 						component={Link}
-						href={`${Routes.metaAds}/${ad.nombre}`}
+						href={`${Routes.metaAds}/${ad.nombre.replaceAll(' ', '_')}`}
 					>
 						<MdKeyboardArrowRight />
 					</ActionIcon>

@@ -5,7 +5,7 @@
 //MATERIAL DESIGN
 import { useDisclosure } from '@mantine/hooks';
 //Components
-import { AppShell, Burger, Group, Title } from '@mantine/core';
+import { AppShell, Burger, Group, Stack, Title } from '@mantine/core';
 
 
 //Components
@@ -64,7 +64,9 @@ const Page = ({children}: PageProps): JSX.Element => {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        {children}
+        <Stack gap='lg' >
+          {children}
+        </Stack>
       </AppShell.Main>
     </AppShell>
   );
