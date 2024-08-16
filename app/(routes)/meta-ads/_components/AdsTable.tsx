@@ -1,20 +1,24 @@
-//NextJS
-import Link from 'next/link';
 import { metaAdsData } from '@/app/_contants';
 
 
 //MATERIAL DESIGN
 //Components
 import {
-	NumberFormatter,
 	rem,
 	Table,
+	TableTbody,
+	TableTh,
+	TableThead,
+	TableTr,
 } from '@mantine/core';
-import MetaAd from '@/app/_types/MetaAd';
+
+
+//Components
 import TableRow from './TableRow';
 
 
 //Types
+import type MetaAd from '@/app/_types/MetaAd';
 type AdsTableProps = {
 	query?: string;
 };
@@ -29,16 +33,16 @@ const AdsTable = ({query}: AdsTableProps): JSX.Element => {
 	};
 
 	const tableHead = (
-		<Table.Thead>
-			<Table.Tr>
-				<Table.Th>Anuncio</Table.Th>
-				<Table.Th style={{ textAlign: 'right' }} display={display} >Gasto publicidad</Table.Th>
-				<Table.Th style={{ textAlign: 'right' }} display={display} >Participación</Table.Th>
-				<Table.Th style={{ textAlign: 'right' }} display={display} >Conversiones</Table.Th>
-				<Table.Th style={{ textAlign: 'right' }} >Alcance</Table.Th>
-				<Table.Th style={{ textAlign: 'right' }} w={rem(125)} >Acciones</Table.Th>
-			</Table.Tr>
-		</Table.Thead>
+		<TableThead>
+			<TableTr>
+				<TableTh>Anuncio</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Gasto publicidad</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Participación</TableTh>
+				<TableTh style={{ textAlign: 'right' }} display={display} >Conversiones</TableTh>
+				<TableTh style={{ textAlign: 'right' }} >Alcance</TableTh>
+				<TableTh style={{ textAlign: 'right' }} w={rem(125)} >Acciones</TableTh>
+			</TableTr>
+		</TableThead>
 	);
 
 	let parsedData: MetaAd[] = [];
@@ -68,9 +72,9 @@ const AdsTable = ({query}: AdsTableProps): JSX.Element => {
 			withTableBorder
 		>
 			{tableHead}
-			<Table.Tbody>
+			<TableTbody>
 				{rows}
-			</Table.Tbody>
+			</TableTbody>
 		</Table>
 	);
 };
