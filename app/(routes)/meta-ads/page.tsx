@@ -16,6 +16,7 @@ import {
 
 
 //Components
+import AdsTable from './_components/AdsTable';
 import SearchBar from '../_components/SearchBar';
 
 
@@ -28,7 +29,7 @@ type PageProps = {
 
 
 //Main component content
-const Page = ({searchParams: { query }}: PageProps): JSX.Element => {
+const Page = ({searchParams: { query }}: PageProps) => {
 
 	const span = {
 		base: 12,
@@ -38,8 +39,8 @@ const Page = ({searchParams: { query }}: PageProps): JSX.Element => {
 
 	//Main component render
 	return (
-		<Stack gap='md' >
-			<Grid>
+		<Stack gap='lg' >
+			<Grid gutter='xs' >
 				<Grid.Col span={span} >
 					<Title order={2} size='h3' >
 						Meta ads
@@ -49,6 +50,7 @@ const Page = ({searchParams: { query }}: PageProps): JSX.Element => {
 					<SearchBar />
 				</Grid.Col>
 			</Grid>
+			<AdsTable query={query} />
 		</Stack>
 	);
 };
