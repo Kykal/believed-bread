@@ -7,8 +7,11 @@ import viewsDateRangeAction from '@/app/_actions/viewsDateRangeAction';
 import {
 	ActionIcon,
 	Box,
+	Button,
 	Card,
 	CardSection,
+	Grid,
+	GridCol,
 	Group,
 	Title,
 } from '@mantine/core';
@@ -58,13 +61,19 @@ const ViewsChart = ({data, startDate, endDate}: ViewsChartProps): JSX.Element =>
 			component='form'
 			action={viewsDateRangeAction}
 		>
-			<Group gap='sm' >
-				<DateInput required name='start-date' placeholder='Inicio' valueFormat='YYYY-MM-DD' />
-				<DateInput required name='end-date' placeholder='Fin' valueFormat='YYYY-MM-DD' />
-				<ActionIcon type='submit' variant='light' >
-					<MdSearch />
-				</ActionIcon>
-			</Group>
+			<Grid justify='flex-end' >
+				<GridCol span={{ base: 12, lg: 4, }} >
+					<DateInput required name='start-date' placeholder='Inicio' valueFormat='YYYY-MM-DD' />
+				</GridCol>
+				<GridCol span={{ base: 12, lg: 4, }} >
+					<DateInput required name='end-date' placeholder='Fin' valueFormat='YYYY-MM-DD' />
+				</GridCol>
+				<GridCol span={{ base: 12, lg: 3, }} >
+					<Button type='submit' fullWidth variant='light' >
+						Buscar
+					</Button>
+				</GridCol>
+			</Grid>
 		</Box>
 	);
 

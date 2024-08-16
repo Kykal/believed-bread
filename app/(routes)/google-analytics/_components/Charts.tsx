@@ -14,6 +14,7 @@ import {
 
 //Components
 import ViewsChart from './ViewsChart';
+import GenderChart from './GenderChart';
 
 
 //Types
@@ -35,6 +36,11 @@ const Charts = ({startDate, endDate}: ChartsProps): JSX.Element => {
 
 	const data = googleAnalyticsData;
 
+	const span = {
+		base: 12,
+		lg: 6,
+	}
+
 
 	//Main component render
 	return (
@@ -46,31 +52,12 @@ const Charts = ({startDate, endDate}: ChartsProps): JSX.Element => {
 					endDate={endDate}
 				/>
 			</GridCol>
+			<GridCol span={span} >
+				<GenderChart />
+			</GridCol>
 		</Grid>
 	);
 };
 
 
 export default Charts; //Export main component
-
-
-
-const PrefabCard = ({title, children}: PrefabCardProps) => {
-	return (
-		<Card
-			shadow='sm'
-			radius='sm'
-			withBorder
-			h='100%'
-		>
-			<CardSection inheritPadding py='xs' withBorder >
-				<Title order={4} >
-					{title}
-				</Title>
-			</CardSection>
-			<CardSection inheritPadding py='xs' style={{ flexGrow: 1, }} >
-				{children}
-			</CardSection>
-		</Card>
-	);
-}
