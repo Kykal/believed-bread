@@ -16,7 +16,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 //Types
 import type GoogleAd from '@/app/_types/GoogleAd';
-import Link from 'next/link';
+
 
 
 //Main component content
@@ -53,7 +53,7 @@ const TableRow = (ad: GoogleAd): JSX.Element => {
 				<Tooltip label='Ver anuncio' withArrow >
 					<ActionIcon
 						variant='light'
-						component={Link}
+						component='a'
 						href={href}
 					>
 						<MdKeyboardArrowRight />

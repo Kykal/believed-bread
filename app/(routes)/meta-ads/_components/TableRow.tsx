@@ -13,7 +13,6 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 //Types
 import type MetaAd from '@/app/_types/MetaAd';
-import Link from 'next/link';
 import { Routes } from '@/app/_configurations/routes';
 type TableRowProps = {
 	ad: MetaAd;
@@ -50,7 +49,7 @@ const TableRow = ({ad}: TableRowProps): JSX.Element => {
 				<Tooltip label='Ver anuncio' withArrow >
 					<ActionIcon
 						variant='light'
-						component={Link}
+						component='a'
 						href={`${Routes.metaAds}/${ad.nombre}`}
 					>
 						<MdKeyboardArrowRight />
